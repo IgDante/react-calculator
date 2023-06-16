@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Calculadora React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A calculadora React é uma aplicação web desenvolvida usando a biblioteca React. Ela permite que os usuários realizem operações matemáticas básicas, como adição, subtração, multiplicação e divisão. Esta documentação fornecerá uma visão geral dos componentes e funcionalidades da calculadora, bem como instruções para executar e personalizar a aplicação.
 
-## Available Scripts
+## 🚀 Começando
 
-In the project directory, you can run:
+A calculadora React consiste em dois componentes principais: Calculator e Button. O componente Calculator representa a calculadora como um todo e é responsável pela lógica de cálculo e exibição dos resultados. O componente Button representa cada botão da calculadora.
 
-### `npm start`
+### 🛠️Componentes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 🔧Calculator
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O componente Calculator é o componente principal da calculadora. Ele possui o estado interno para armazenar os valores e operações, além de manipular as interações do usuário. A estrutura básica do componente Calculator é a seguinte:
 
-### `npm test`
+    import React, { useState } from 'react';
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    const Calculator = () => {
+    // Estado interno
+    const [displayValue, setDisplayValue] = useState('0');
+    const [firstOperand, setFirstOperand] = useState(null);
+    const [operator, setOperator] = useState(null);
+    const [waitingForSecondOperand, setWaitingForSecondOperand] = useState(false);
 
-### `npm run build`
+    // Lógica de cálculo e manipulação de eventos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    return (
+        <div className="calculator">
+        {/* Visor */}
+        {/* Botões */}
+        </div>
+    );
+    };
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    export default Calculator;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### 🔧Button
+O componente Button representa cada botão da calculadora. Ele recebe uma propriedade onClick para manipular o evento de clique do botão. Aqui está um exemplo básico da estrutura do componente Button:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    import React from 'react';
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    const Button = ({ onClick, label }) => {
+    return (
+        <button className="button" onClick={onClick}>
+        {label}
+        </button>
+    );
+    };
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    export default Button;
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⚙️Funcionalidades
+A calculadora React suporta as seguintes funcionalidades:
 
-## Learn More
+* Exibir números no visor da calculadora.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Realizar operações de adição, subtração, multiplicação e divisão.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Limpar o visor e redefinir os valores.
+* Exibir o resultado da operação.
 
-### Code Splitting
+## 🛠️ Construído com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* [React](https://react.dev/) - Biblioteca utilizada
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Como linguagem
+* [Yarn](https://yarnpkg.com/) - Gerenciador de pacotes
 
-### Analyzing the Bundle Size
+## Conclusão
+Esta documentação forneceu uma visão geral dos componentes, funcionalidades e instruções de execução da calculadora React.
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ✒️ Autor
 
-### Making a Progressive Web App
+* **Dante** - *Desenvolvedor Web* - [Pefil GitHub](https://github.com/IgDante)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📄 Licença
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está sob a licença (MIT)
